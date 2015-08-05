@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Зворотній зв'язок. Театр "Вояж-Престиж"</title>
+    <meta name="keywords" content="театр Вояж-Престиж, форма зворотнього зв'язку, зв'язок з адміністрацією">
+    <meta name="description" content="Театр Вояж-Престиж. Форма зворотнього зв'язку."/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <img class="logo" src="../img/logo.png" alt="Вояж-Престиж"/>
+        <h1 class="headtext">Київський театр <br/>
+            "Вояж-Престиж"</h1>
+    </div>
+    <h2>Зворотній зв'язок</h2>
+    <form method="POST" id="feedback-form">
+        Як до Вас звертатися:
+        <input type="text" name="nameFF" required placeholder="Прізвище, ім'я, по батькові" x-autocompletetype="name">
+        Email для зв'язку:
+        <input type="email" name="contactFF" required placeholder="Адреса електронної пошти" x-autocompletetype="email">
+        Ваше повідомлення:
+        <textarea name="messageFF" required rows="8" placeholder="ТУТ ВИ МОЖЕТЕ НАПИСАТИ СВОЄ ПОБАЖАННЯ, СКАРГУ, ПРОПОЗИЦІЮ ПО СПІВРОБІТНИЦТВУ АБО ЗАМОВИТИ ЗВОРОТНІЙ ДЗВІНОК..."></textarea>
+        <input type="submit" value="Відправити">
+    </form>
+
+    <script>
+        document.getElementById('feedback-form').onsubmit = function(){
+            var http = new XMLHttpRequest();
+            http.open("POST", "../contacts.php", true);
+            http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            http.send("nameFF=" + this.nameFF.value + "&contactFF=" + this.contactFF.value + "&messageFF=" + this.messageFF.value);
+            http.onreadystatechange = function() {
+                if (http.readyState == 4 && http.status == 200) {
+                    alert(http.responseText + ', Ваше повідомлення отримано!\nАдміністрація відповість на нього упродовж 2х днів.\nДякуємо!');
+                }
+            }
+            http.onerror = function() {
+                alert('Извините, данные не были переданы');
+            }
+            return false;
+        }
+    </script>
+    <a class="back_button" href="main_ukr.html">На головну</a>
+</div>
+</body>
+</html>

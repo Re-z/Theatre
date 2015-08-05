@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Фото-Видео. Театр "Вояж-Престиж"</title>
+    <meta name="keywords" content="театр Вояж Престиж, фото выступлений, видео выступлений, галерея, вояж престиж фото"/>
+    <meta name="description" content="Фото и видео выступлений Киевского театра Вояж-Престиж."/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <script src="../js/jssor.slider.mini.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="first">
+</div>
+<div class="main3">
+    <div class="header">
+        <img class="logo" src="../img/logo.png" alt="Вояж-Престиж"/>
+        <h1 class="headtext">Киевский театр <br/>
+            "Вояж-Престиж"</h1>
+    </div>
+    <h2>Фотогалерея</h2>
+    <script>
+        jQuery(document).ready(function ($) {
+
+            $('#checkbox').change(function(){
+                setInterval(function () {
+                    moveRight();
+                }, 3000);
+            });
+
+            var slideCount = $('#slider_vertical ul li').length;
+            var slideWidth = $('#slider_vertical ul li').width();
+            var slideHeight = $('#slider_vertical ul li').height();
+            var sliderUlWidth = slideCount * slideWidth;
+
+            $('#slider_vertical').css({ width: slideWidth, height: slideHeight });
+
+            $('#slider_vertical ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+            $('#slider_vertical ul li:last-child').prependTo('#slider_vertical ul');
+
+            function moveLeft() {
+                $('#slider_vertical ul').animate({
+                    left: + slideWidth
+                }, 200, function () {
+                    $('#slider_vertical ul li:last-child').prependTo('#slider_vertical ul');
+                    $('#slider_vertical ul').css('left', '');
+                });
+            };
+
+            function moveRight() {
+                $('#slider_vertical ul').animate({
+                    left: - slideWidth
+                }, 200, function () {
+                    $('#slider_vertical ul li:first-child').appendTo('#slider_vertical ul');
+                    $('#slider_vertical ul').css('left', '');
+                });
+            };
+
+            $('a.control_prev_vertical').click(function () {
+                moveLeft();
+            });
+
+            $('a.control_next_vertical').click(function () {
+                moveRight();
+            });
+
+        });
+    </script>
+    <div id="slider_vertical">
+        <a href="javascript: void(0)"></a>
+        <a "href="javascript: void(0)" class="control_next_vertical">>></a>
+        <a "href="javascript: void(0)" class="control_prev_vertical"><<</a>
+        <ul>
+            <li><img src="../img/photo/vertical/two.JPG" alt="Вояж-Престиж, фото"/>SLIDE 1</li>
+            <li><img src="../img/photo/vertical/one.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/vertical/three.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/vertical/four2.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/vertical/5.jpg" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/vertical/seven.jpg" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/vertical/eight.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/vertical/nine.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/vertical/ten.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/vertical/eleven.JPG" alt="Вояж-Престиж, фото"/></li>
+
+        </ul>
+    </div>
+    <script>
+        jQuery(document).ready(function ($) {
+
+            $('#checkbox').change(function(){
+                setInterval(function () {
+                    moveRight();
+                }, 3000);
+            });
+
+            var slideCount = $('#slider ul li').length;
+            var slideWidth = $('#slider ul li').width();
+            var slideHeight = $('#slider ul li').height();
+            var sliderUlWidth = slideCount * slideWidth;
+
+            $('#slider').css({ width: slideWidth, height: slideHeight });
+
+            $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+            $('#slider ul li:last-child').prependTo('#slider ul');
+
+            function moveLeft() {
+                $('#slider ul').animate({
+                    left: + slideWidth
+                }, 200, function () {
+                    $('#slider ul li:last-child').prependTo('#slider ul');
+                    $('#slider ul').css('left', '');
+                });
+            };
+
+            function moveRight() {
+                $('#slider ul').animate({
+                    left: - slideWidth
+                }, 200, function () {
+                    $('#slider ul li:first-child').appendTo('#slider ul');
+                    $('#slider ul').css('left', '');
+                });
+            };
+
+            $('a.control_prev').click(function () {
+                moveLeft();
+            });
+
+            $('a.control_next').click(function () {
+                moveRight();
+            });
+
+        });
+    </script>
+    <div id="slider">
+        <a href="javascript: void(0)"></a>
+        <a "href="javascript: void(0)" class="control_next">>></a>
+        <a "href="javascript: void(0)" class="control_prev"><<</a>
+        <ul>
+            <li><img src="../img/photo/horizontal/3.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/horizontal/1.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/horizontal/2.JPG" alt=""Вояж-Престиж, фото/></li>
+            <li><img src="../img/photo/horizontal/4.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/horizontal/5.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/horizontal/6.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/horizontal/7.JPG" alt="Вояж-Престиж, фото"/></li>
+            <li><img src="../img/photo/horizontal/8.JPG" alt="Вояж-Престиж, фото"/></li>
+        </ul>
+    </div>
+
+    <h2>Видеогалерея</h2>
+    <iframe class="video" width="800" height="560" src="//www.youtube.com/embed/iao-l4USKEU?list=UU3Bx_vnA7t4-FesOoqocXzg" frameborder="0" allowfullscreen></iframe>
+    <iframe class="video" width="800" height="560" src="//www.youtube.com/embed/JXb6ZBYJUUE" frameborder="0" allowfullscreen></iframe>
+    <iframe class="video" width="800" height="560" src="//www.youtube.com/embed/rXMeVSbyoSc" frameborder="0" allowfullscreen></iframe>
+
+    <a class="back_button" href="../index.html">На главную</a>
+
+
+</div>
+</body>
+</html>

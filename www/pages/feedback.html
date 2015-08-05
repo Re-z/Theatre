@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Форма обратной связи. Театр "Вояж-Престиж"</title>
+    <meta name="keywords" content="театр Вояж-Престиж, форма обратной связи, конакт с администрацией"/>
+    <meta name="description" content="Театр Вояж-Престиж. Форма обратной связи."/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div class="main main_feedback">
+    <div class="header">
+        <img class="logo" src="../img/logo.png" alt="Вояж-Престиж"/>
+        <h1 class="headtext">Киевский театр <br/>
+            "Вояж-Престиж"</h1>
+    </div>
+    <h2>Обратная связь</h2>
+        <form method="POST" id="feedback-form">
+            Как к Вам обращаться:
+            <input type="text" name="nameFF" required placeholder="Фамилия, имя, отчество" x-autocompletetype="name">
+            Email для связи:
+            <input type="email" name="contactFF" required placeholder="Адрес электронной почты" x-autocompletetype="email">
+            Ваше сообщение:
+            <textarea name="messageFF" required rows="8" placeholder="ЗДЕСЬ ВЫ МОЖЕТЕ НАПИСАТЬ СВОЕ ПОЖЕЛАНИЕ, ЗАМЕЧЕНИЕ, ПРЕДЛОЖЕНИЕ ПО СОТРУДНИЧЕСТВУ ИЛИ ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК..."></textarea>
+            <input type="submit" value="Отправить">
+        </form>
+
+        <script>
+            document.getElementById('feedback-form').onsubmit = function(){
+                var http = new XMLHttpRequest();
+                http.open("POST", "../contacts.php", true);
+                http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                http.send("nameFF=" + this.nameFF.value + "&contactFF=" + this.contactFF.value + "&messageFF=" + this.messageFF.value);
+                http.onreadystatechange = function() {
+                    if (http.readyState == 4 && http.status == 200) {
+                        alert(http.responseText + ', Ваше сообщение получено!.\nАдминистрация ответит на него на протяжении 2х дней.\nСпасибо!');
+                    }
+                }
+                http.onerror = function() {
+                    alert('Извините, данные не передано');
+                }
+                return false;
+            }
+        </script>
+    <a class="back_button" href="../index.html">На главную</a>
+</div>
+</body>
+</html>
