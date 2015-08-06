@@ -20,11 +20,14 @@ body {
     background-position: top;
 }
 
-.main_o-nas{
+.main_o-nas, .main_o-nas_ukr{
     height: 990px;
 }
 
-.main_contacts, .main_feedback {
+.main_feedback_ukr {
+    height: 920px;
+}
+.main_contacts, .main_feedback  {
     height: 900px;
 }
 .main_lab {
