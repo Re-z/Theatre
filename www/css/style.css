@@ -32,6 +32,7 @@ body {
 }
 .main_lab {
     height: 900px;
+    background: none;
 }
 .main2 {
     margin: 0 auto;
@@ -186,7 +187,7 @@ body {
     background: url("../img/ukr.jpg");
 }
 .lang-change_rus {
-      background: url("../img/rus.png");
+      background: url("../img/rus.PNG");
 }
 .footer__text {
     text-align: center;
@@ -589,4 +590,68 @@ a.control_next_vertical {
     -o-border-radius: 2px 0 0 2px;
     -ms-border-radius: 2px 0 0 2px;
     border-radius: 2px 0 0 2px;
+}
+/* LAB */
+.slider-wrap-wrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+.slider-wrapper {
+    overflow: hidden;
+    width: 600px;
+    height: 400px;
+    outline: 2px double #B71218;
+    outline-offset: 5px;
+    margin: 0 auto;
+    position: relative;
+
+}
+.slider {
+    list-style: none;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+
+}
+.slider__item {
+    display: inline-block;
+    float: left;
+
+}
+.slider__img {
+    width: 600px;
+    height: 400px;
+
+}
+
+.slider__btn {
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-color: rgb(183,18,24);
+    position: absolute;
+    font-weight: bold;
+    z-index: 300;
+    top: 189px;
+    border-radius: 50%;
+    display: block;
+}
+.slider__btn:hover {
+    cursor: pointer;
+}
+.slider__btn_left {
+    left: -60px;
+}
+.slider__btn_right {
+    left: 620px;
+}
+.slider__btn-content {
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+    text-indent: 0;
 }
