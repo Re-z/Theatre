@@ -15,6 +15,7 @@ body {
 .main {
     margin: 0 auto;
     margin-top: -37px;
+    max-width: 100%;
     width: 1000px;
     background: url(../img/mainbg2.jpg) no-repeat;
     background-position: top;
@@ -613,7 +614,6 @@ a.control_next_vertical {
     width: 9999px;
     margin: 0;
     padding: 0;
-
 }
 .slider__item {
     display: inline-block;

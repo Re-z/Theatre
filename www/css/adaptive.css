@@ -1,0 +1,50 @@
+@media (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .main {
+        background: none;
+        margin-top: 10px;
+    }
+    .header {
+        border-bottom: none;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .headtext {
+        font-size: 30px;
+    }
+    .logo {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    .navigation {
+        float: none;
+        height: auto;
+    }
+    .menu {
+        margin-left: 0;
+        margin: 0 auto;
+    }
+    .main-footer {
+        border-top: none;
+        margin-top: 40px;
+    }
+    .footer__text {
+        display: none;
+    }
+    .lang-change-wrapper {
+        margin: 0 auto;
+        width: 210px;
+    }
+    .lang-change {
+        width: 100px;
+        height: 40px;
+        float: left;
+        margin-right: 5px;
+        background-size: 100%;
+    }
+}
