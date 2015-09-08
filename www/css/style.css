@@ -506,6 +506,8 @@ a.control_next {
 .video {
     margin-left: 100px;
     margin-top: 50px;
+    outline: 2px double #B71218;
+    outline-offset: 5px;
 }
 #slider_vertical {
     position: relative;
@@ -654,4 +656,25 @@ a.control_next_vertical {
     font-size: 24px;
     margin: 0;
     text-indent: 0;
+}
+/* new gallery section */
+.bg-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+    background: url("../img/curtains2.png");
+}
+.main_gallery {
+    background-image: none;
+}
+.content_gallery {
+    padding-top: 50px;
+    height: auto;
+}
+.slider-wrap-wrapper_gallery {
+    margin-top: 50px;
+    margin-bottom: 60px;
 }
